@@ -1,0 +1,6 @@
+@echo off
+echo Installing dependencies for Blog Server...
+cd %~dp0
+npm install
+echo Starting Blog Server...
+npm start 
