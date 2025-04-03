@@ -1,9 +1,18 @@
 {
   "version": 2,
+  "builds": [{ "src": "package.json", "use": "@vercel/static-build" }],
   "routes": [
+    {
+      "src": "/data/(.*)\\.json",
+      "dest": "/data/$1.json"
+    },
     {
       "src": "/blog/(.*)\\.html",
       "dest": "/blog/$1.html"
+    },
+    {
+      "src": "/blog/?$",
+      "dest": "/blog/index.html"
     },
     {
       "src": "/sitemap.xml",
@@ -16,6 +25,9 @@
     {
       "src": "/assets/(.*)",
       "dest": "/assets/$1"
+    },
+    {
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
