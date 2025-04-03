@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Build a Progressive Web App (PWA)</title>
+  <meta name="description" content="A step-by-step guide to building Progressive Web Apps that work offline and load fast.">
+  <meta name="author" content="Michael Davis">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Redirect to the React app when loaded by a browser -->
+  <script>
+    window.onload = function() {
+      if (!window.navigator.userAgent.includes('Googlebot') && 
+          !window.navigator.userAgent.includes('bingbot') && 
+          !window.navigator.userAgent.includes('YandexBot')) {
+        window.location.href = '/blog/post/building-pwa';
+      }
+    }
+  </script>
+</head>
+<body>
+  <article>
+    <h1>How to Build a Progressive Web App (PWA)</h1>
+    <div class="post-meta">
+      <span class="date">2024-04-17</span>
+      <span class="author">By Michael Davis</span>
+    </div>
+    <div class="content">
+    <p>PWAs provide a native-like experience in the browser with offline capabilities.</p>
+    <p>They use service workers to cache assets and enable background sync.</p>
+    <p>PWAs improve user engagement with push notifications and fast load times.</p>
+    <p>Google Lighthouse can be used to audit and optimize PWAs.</p>
+    <p>Progressive Web Apps are installable on mobile devices without requiring an app store.</p>
+    </div>
+  </article>
+</body>
+</html>

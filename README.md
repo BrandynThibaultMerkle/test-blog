@@ -81,6 +81,44 @@ Each blog post has the following structure:
 }
 ```
 
+## SEO Enhancements
+
+This blog includes SEO optimization features:
+
+### Static HTML Generation
+
+The system automatically generates static HTML files for all blog posts to improve search engine discoverability:
+
+- Located in `/public/blog/` directory
+- Generated when the server starts and when new posts are created
+- Files are named using the post's slug (e.g., `getting-started-with-react.html`)
+- Includes proper metadata and structured content for search engines
+- Smart redirect for human visitors to the React app while allowing search engine bots to crawl
+
+### Sitemap Generation
+
+A sitemap.xml file is automatically generated to help search engines discover content:
+
+- Located at `/public/sitemap.xml`
+- Includes all blog pages and individual posts
+- Regenerated when the server starts
+- Can be manually regenerated via API endpoint
+
+### Manual Regeneration
+
+If needed, you can manually regenerate these files:
+
+```
+# Regenerate all HTML files
+GET http://localhost:3001/api/generate-html
+
+# Regenerate sitemap
+GET http://localhost:3001/api/generate-sitemap
+
+# Specify a custom base URL for the sitemap
+GET http://localhost:3001/api/generate-sitemap?baseUrl=https://yourdomain.com
+```
+
 ## Technical Details
 
 - React 19 with Vite

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding WebSockets for Real-Time Applications</title>
+  <meta name="description" content="Learn how WebSockets enable real-time communication between clients and servers.">
+  <meta name="author" content="Daniel Brooks">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Redirect to the React app when loaded by a browser -->
+  <script>
+    window.onload = function() {
+      if (!window.navigator.userAgent.includes('Googlebot') && 
+          !window.navigator.userAgent.includes('bingbot') && 
+          !window.navigator.userAgent.includes('YandexBot')) {
+        window.location.href = '/blog/post/understanding-websockets';
+      }
+    }
+  </script>
+</head>
+<body>
+  <article>
+    <h1>Understanding WebSockets for Real-Time Applications</h1>
+    <div class="post-meta">
+      <span class="date">2024-04-15</span>
+      <span class="author">By Daniel Brooks</span>
+    </div>
+    <div class="content">
+    <p>WebSockets provide a full-duplex communication channel over a single TCP connection.</p>
+    <p>They are ideal for applications like chat apps, stock tickers, and multiplayer games.</p>
+    <p>Unlike HTTP, WebSockets maintain an open connection, reducing latency.</p>
+    <p>The WebSocket API is supported by modern browsers and integrates with various backend technologies.</p>
+    <p>Implementing WebSockets can significantly improve user experience in real-time applications.</p>
+    </div>
+  </article>
+</body>
+</html>

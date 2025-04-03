@@ -34,6 +34,8 @@ This local server provides the following functionality:
 2. Automatically paginates blog posts (10 posts per page)
 3. Updates the blog metadata file
 4. Creates new page files when needed
+5. Generates static HTML files for SEO
+6. Creates and maintains a sitemap.xml file
 
 ## For Non-Technical Users
 
@@ -49,3 +51,27 @@ This local server provides the following functionality:
 
 - `GET /api/metadata` - Gets the current blog metadata
 - `POST /api/posts` - Creates a new blog post
+- `GET /api/generate-html` - Regenerates all static HTML files for SEO
+- `GET /api/generate-sitemap` - Regenerates the sitemap.xml file
+
+## SEO Features
+
+### Static HTML Generation
+
+The server automatically generates static HTML files for all blog posts in the `/public/blog/` directory. This improves search engine discoverability by providing:
+
+- HTML files named using the post's slug (e.g., `getting-started-with-react.html`)
+- Proper metadata and structured content
+- Smart JavaScript redirect that only affects human visitors while allowing search engine bots to crawl the content
+
+### Sitemap.xml Generation
+
+The server creates a `sitemap.xml` file in the `/public/` directory to help search engines discover all content:
+
+- Lists all blog pages and individual post pages
+- Includes priority and change frequency information
+- Gets regenerated when the server starts or when using the API endpoint
+- Can be customized with a base URL parameter:
+  `GET /api/generate-sitemap?baseUrl=https://yourdomain.com`
+
+When adding new blog posts, both HTML files and the sitemap are automatically updated.

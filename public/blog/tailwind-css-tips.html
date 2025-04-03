@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind CSS Tips and Tricks</title>
+  <meta name="description" content="Discover useful tips and tricks for working with Tailwind CSS in your projects.">
+  <meta name="author" content="Jane Smith">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Redirect to the React app when loaded by a browser -->
+  <script>
+    window.onload = function() {
+      if (!window.navigator.userAgent.includes('Googlebot') && 
+          !window.navigator.userAgent.includes('bingbot') && 
+          !window.navigator.userAgent.includes('YandexBot')) {
+        window.location.href = '/blog/post/tailwind-css-tips';
+      }
+    }
+  </script>
+</head>
+<body>
+  <article>
+    <h1>Tailwind CSS Tips and Tricks</h1>
+    <div class="post-meta">
+      <span class="date">2024-04-02</span>
+      <span class="author">By Jane Smith</span>
+    </div>
+    <div class="content">
+    <p>Tailwind CSS provides a utility-first approach to styling web applications.</p>
+    <p>Use dark mode utilities to easily switch between light and dark themes.</p>
+    <p>Optimize your styles by using @apply for common patterns in your design system.</p>
+    <p>Customize Tailwind's configuration to match your branding needs with extended color palettes.</p>
+    <p>Combine pseudo-class variants like hover:, focus:, and active: for interactive designs.</p>
+    </div>
+  </article>
+</body>
+</html>

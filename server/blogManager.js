@@ -3,6 +3,8 @@ const cors = require('cors')
 const fs = require('fs')
 const path = require('path')
 const bodyParser = require('body-parser')
+const htmlGenerator = require('./htmlGenerator')
+const sitemapGenerator = require('./sitemapGenerator')
 
 const app = express()
 const PORT = 3001
@@ -125,6 +127,14 @@ app.post('/api/posts', (req, res) => {
         .json({ success: false, message: 'Failed to update metadata' })
     }
 
+    // Generate static HTML file for SEO
+    const htmlResult = htmlGenerator.generateSinglePostHtml(post)
+    if (!htmlResult.success) {
+      console.error(
+        `Warning: Failed to generate HTML for post ${post.slug}: ${htmlResult.error}`
+      )
+    }
+
     res.json({
       success: true,
       message: 'Blog post created successfully!',
@@ -140,9 +150,84 @@ app.post('/api/posts', (req, res) => {
   }
 })
 
+// Add new endpoint to generate HTML for all posts
+app.get('/api/generate-html', async (req, res) => {
+  try {
+    const result = await htmlGenerator.generateAllPostHtml()
+    res.json({
+      success: result.success,
+      message: `Generated ${result.count} HTML files for blog posts`,
+      errors: result.errors,
+    })
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: `Error generating HTML files: ${error.message}`,
+    })
+  }
+})
+
+// Add endpoint to generate sitemap
+app.get('/api/generate-sitemap', async (req, res) => {
+  try {
+    // Get the base URL from the request
+    const baseUrl = req.query.baseUrl || `http://${req.headers.host}`
+
+    const result = await sitemapGenerator.generateSitemap(baseUrl)
+
+    if (result.success) {
+      res.json({
+        success: true,
+        message: 'Sitemap generated successfully',
+      })
+    } else {
+      res.status(500).json({
+        success: false,
+        message: `Error generating sitemap: ${result.error}`,
+      })
+    }
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: `Error generating sitemap: ${error.message}`,
+    })
+  }
+})
+
 app.listen(PORT, () => {
   console.log(`Blog manager server running at http://localhost:${PORT}`)
   console.log(`Data directory: ${DATA_DIR}`)
+
+  // Generate static HTML files for all existing posts on server start
+  htmlGenerator
+    .generateAllPostHtml()
+    .then((result) => {
+      if (result.success) {
+        console.log(`Generated ${result.count} static HTML files for SEO`)
+        if (result.errors.length > 0) {
+          console.warn(`With ${result.errors.length} errors:`, result.errors)
+        }
+      } else {
+        console.error('Failed to generate HTML files:', result.errors)
+      }
+    })
+    .catch((err) => {
+      console.error('Error during HTML generation:', err)
+    })
+
+  // Generate sitemap
+  sitemapGenerator
+    .generateSitemap(`http://localhost:${PORT}`)
+    .then((result) => {
+      if (result.success) {
+        console.log('Sitemap generated successfully')
+      } else {
+        console.error('Failed to generate sitemap:', result.error)
+      }
+    })
+    .catch((err) => {
+      console.error('Error during sitemap generation:', err)
+    })
 })
 
 module.exports = app

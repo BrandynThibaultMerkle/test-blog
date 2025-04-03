@@ -1,0 +1,62 @@
+/* Basic styles for static blog post HTML files */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: #e2e8f0;
+  background-color: #1a202c;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+article {
+  background-color: #2d3748;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.post-meta {
+  display: flex;
+  color: #a0aec0;
+  margin-bottom: 2rem;
+}
+
+.post-meta .date {
+  margin-right: 1rem;
+}
+
+.content p {
+  margin-bottom: 1.5rem;
+}
+
+/* Special styling for code blocks and lists */
+.content pre {
+  background-color: #1a202c;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  overflow-x: auto;
+}
+
+.content ul,
+.content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.content a {
+  color: #63b3ed;
+  text-decoration: none;
+}
+
+.content a:hover {
+  text-decoration: underline;
+}
