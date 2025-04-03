@@ -215,12 +215,12 @@ app.listen(PORT, () => {
       console.error('Error during HTML generation:', err)
     })
 
-  // Generate sitemap
+  // Generate sitemap with Vercel URL
   sitemapGenerator
-    .generateSitemap(`http://localhost:${PORT}`)
+    .generateSitemap('https://test-blog-gamma-khaki.vercel.app')
     .then((result) => {
       if (result.success) {
-        console.log('Sitemap generated successfully')
+        console.log('Sitemap generated successfully with Vercel URL')
       } else {
         console.error('Failed to generate sitemap:', result.error)
       }

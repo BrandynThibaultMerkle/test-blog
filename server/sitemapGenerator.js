@@ -9,6 +9,9 @@ const path = require('path')
 const DATA_DIR = path.join(__dirname, '../public/data')
 const PUBLIC_DIR = path.join(__dirname, '../public')
 
+// Set default base URL to the Vercel deployment
+const DEFAULT_BASE_URL = 'https://test-blog-gamma-khaki.vercel.app'
+
 /**
  * Read JSON file and parse its contents
  * @param {string} filePath - Path to the JSON file
@@ -32,10 +35,10 @@ const readJsonFile = (filePath) => {
  * @param {string} baseUrl - Base URL of the website (e.g., https://example.com)
  * @returns {Promise<{success: boolean, error: string|null}>} - Result of the operation
  */
-const generateSitemap = async (baseUrl) => {
+const generateSitemap = async (baseUrl = DEFAULT_BASE_URL) => {
   try {
     if (!baseUrl) {
-      return { success: false, error: 'Base URL is required' }
+      baseUrl = DEFAULT_BASE_URL
     }
 
     // Make sure the base URL ends with a trailing slash

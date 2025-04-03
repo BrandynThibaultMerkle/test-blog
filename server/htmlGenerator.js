@@ -10,6 +10,9 @@ const path = require('path')
 const DATA_DIR = path.join(__dirname, '../public/data')
 const HTML_DIR = path.join(__dirname, '../public/blog')
 
+// Site URL for redirects
+const SITE_URL = 'https://test-blog-gamma-khaki.vercel.app'
+
 // Ensure the blog directory exists
 if (!fs.existsSync(HTML_DIR)) {
   fs.mkdirSync(HTML_DIR, { recursive: true })
@@ -51,14 +54,14 @@ const generatePostHtml = (post) => {
   <title>${post.title}</title>
   <meta name="description" content="${post.excerpt}">
   <meta name="author" content="${post.author}">
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="${SITE_URL}/assets/css/style.css">
   <!-- Redirect to the React app when loaded by a browser -->
   <script>
     window.onload = function() {
       if (!window.navigator.userAgent.includes('Googlebot') && 
           !window.navigator.userAgent.includes('bingbot') && 
           !window.navigator.userAgent.includes('YandexBot')) {
-        window.location.href = '/blog/post/${post.slug}';
+        window.location.href = '${SITE_URL}/blog/post/${post.slug}';
       }
     }
   </script>
