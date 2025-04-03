@@ -25,7 +25,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://test-blog-gamma-khaki.vercel.app/blog/getting-started-with-react.html</loc>
+    <lastmod>2024-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://test-blog-gamma-khaki.vercel.app/blog/post/tailwind-css-tips</loc>
+    <lastmod>2024-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://test-blog-gamma-khaki.vercel.app/blog/tailwind-css-tips.html</loc>
     <lastmod>2024-04-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -37,7 +49,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://test-blog-gamma-khaki.vercel.app/blog/javascript-array-methods.html</loc>
+    <lastmod>2024-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://test-blog-gamma-khaki.vercel.app/blog/post/async-await-in-js</loc>
+    <lastmod>2024-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://test-blog-gamma-khaki.vercel.app/blog/async-await-in-js.html</loc>
     <lastmod>2024-04-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -49,7 +73,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://test-blog-gamma-khaki.vercel.app/blog/nodejs-express-basics.html</loc>
+    <lastmod>2024-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://test-blog-gamma-khaki.vercel.app/blog/post/css-grid-vs-flexbox</loc>
+    <lastmod>2024-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://test-blog-gamma-khaki.vercel.app/blog/css-grid-vs-flexbox.html</loc>
     <lastmod>2024-04-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -61,7 +97,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://test-blog-gamma-khaki.vercel.app/blog/introduction-to-typescript.html</loc>
+    <lastmod>2024-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://test-blog-gamma-khaki.vercel.app/blog/post/react-state-management</loc>
+    <lastmod>2024-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://test-blog-gamma-khaki.vercel.app/blog/react-state-management.html</loc>
     <lastmod>2024-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -73,7 +121,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://test-blog-gamma-khaki.vercel.app/blog/git-best-practices.html</loc>
+    <lastmod>2024-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://test-blog-gamma-khaki.vercel.app/blog/post/database-design-principles</loc>
+    <lastmod>2024-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://test-blog-gamma-khaki.vercel.app/blog/database-design-principles.html</loc>
     <lastmod>2024-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -85,7 +145,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://test-blog-gamma-khaki.vercel.app/blog/introduction-to-webassembly.html</loc>
+    <lastmod>2024-04-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://test-blog-gamma-khaki.vercel.app/blog/post/graphql-vs-rest-api</loc>
+    <lastmod>2024-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://test-blog-gamma-khaki.vercel.app/blog/graphql-vs-rest-api.html</loc>
     <lastmod>2024-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -97,7 +169,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://test-blog-gamma-khaki.vercel.app/blog/introduction-to-docker.html</loc>
+    <lastmod>2024-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://test-blog-gamma-khaki.vercel.app/blog/post/nextjs-vs-gatsby</loc>
+    <lastmod>2024-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://test-blog-gamma-khaki.vercel.app/blog/nextjs-vs-gatsby.html</loc>
     <lastmod>2024-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -109,7 +193,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://test-blog-gamma-khaki.vercel.app/blog/understanding-websockets.html</loc>
+    <lastmod>2024-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://test-blog-gamma-khaki.vercel.app/blog/post/ci-cd-pipelines</loc>
+    <lastmod>2024-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://test-blog-gamma-khaki.vercel.app/blog/ci-cd-pipelines.html</loc>
     <lastmod>2024-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -121,13 +217,31 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://test-blog-gamma-khaki.vercel.app/blog/building-pwa.html</loc>
+    <lastmod>2024-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://test-blog-gamma-khaki.vercel.app/blog/post/machine-learning-for-beginners</loc>
     <lastmod>2024-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://test-blog-gamma-khaki.vercel.app/blog/machine-learning-for-beginners.html</loc>
+    <lastmod>2024-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://test-blog-gamma-khaki.vercel.app/blog/post/microservices-architecture</loc>
+    <lastmod>2024-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://test-blog-gamma-khaki.vercel.app/blog/microservices-architecture.html</loc>
     <lastmod>2024-04-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

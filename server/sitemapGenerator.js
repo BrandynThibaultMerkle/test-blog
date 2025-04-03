@@ -71,7 +71,7 @@ const generateSitemap = async (baseUrl = DEFAULT_BASE_URL) => {
       })
     }
 
-    // Add individual blog post URLs
+    // Add individual blog post URLs - both React app routes and static HTML files
     for (let i = 1; i <= metadata.totalPages; i++) {
       const pageFilePath = path.join(DATA_DIR, `blog-page-${i}.json`)
       const posts = readJsonFile(pageFilePath)
@@ -83,8 +83,17 @@ const generateSitemap = async (baseUrl = DEFAULT_BASE_URL) => {
 
       for (const post of posts) {
         if (post.slug) {
+          // Add React app route
           urls.push({
             loc: `${normalizedBaseUrl}blog/post/${post.slug}`,
+            priority: '0.7',
+            changefreq: 'monthly',
+            lastmod: post.date,
+          })
+
+          // Add static HTML file for search engines
+          urls.push({
+            loc: `${normalizedBaseUrl}blog/${post.slug}.html`,
             priority: '0.7',
             changefreq: 'monthly',
             lastmod: post.date,
